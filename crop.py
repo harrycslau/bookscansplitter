@@ -1,6 +1,6 @@
 from pypdf import PdfWriter, PdfReader
 
-with open("002-043.pdf", "rb") as in_f:
+with open("inputs/002-043.pdf", "rb") as in_f:
     input1 = PdfReader(in_f)
     output = PdfWriter()
 
@@ -17,5 +17,5 @@ with open("002-043.pdf", "rb") as in_f:
         output.add_page(page)
 
 
-    with open("out.pdf", "wb") as out_f:
+    with open("outputs/out.pdf", "wb") as out_f:
         output.write(out_f)
