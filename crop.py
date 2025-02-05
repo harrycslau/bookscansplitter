@@ -1,7 +1,7 @@
 from pypdf import PdfWriter, PdfReader
 
-inFile  = "inputs/002-043.pdf"
-outFile = "outputs/out.pdf"
+inFile  = "inputs/090-123.pdf"
+outFile = "outputs/090-123.pdf"
 
 with open(inFile, "rb") as in_f:
     input1 = PdfReader(in_f)
@@ -10,13 +10,17 @@ with open(inFile, "rb") as in_f:
     numPages = len(input1.pages)
     print("document has %s pages." % numPages)
 
+
+    # on Mac, use Preview -> Tools -> Show Inspector -> CropBox,
+    # and set the Unit to Points to get the cropbox values.
+    # lower_left is really lower left, so Y is (page_height - top)
     for i in range(numPages):
         page = input1.pages[i]
-        page.cropbox.lower_left = (30, 10)
-        page.cropbox.upper_right = (550, 730)
+        page.cropbox.lower_left = (65, 22)
+        page.cropbox.upper_right = (520, 702)
         output.add_page(page)
-        page.cropbox.lower_left = (580, 10)
-        page.cropbox.upper_right = (1100, 730)
+        page.cropbox.lower_left = (515, 22)
+        page.cropbox.upper_right = (985, 702)
         output.add_page(page)
 
 
