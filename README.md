@@ -4,7 +4,9 @@ This script helps split scanned book PDF from two-page format to individual page
 
 ## How to Use
 1. Measure the size of the book when opened. The scan area can be a bit larger.
-2. Scan the book. Prefer around 40-80 pages (20-40 scans) each time.
+2. Scan the book.
+    - Make sure the left and top edges aligned with the scanning platform.
+    - Prefer around 40-80 pages (20-40 scans) each time.
     - 10 pages (5 scans) take around 1 minute
 3. Rename the file according to page number, e.g. 002-021.pdf
 4. On Mac, open the scanned PDF with Preview.
